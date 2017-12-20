@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://englishfirstaid.net/wp-content/uploads/2016/01/English_multisearch-1.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>@media print {#ghostery-purple-box {display:none !important}}</style>
+  </head>
+  <body style="background-color:grey">
+
+    <p>What English word would you like to multisearch? Type below, then press enter please.</p>
+    <input type="text" id="boxu" autofocus>
+
+    <script>
+      document.getElementById("boxu").onkeydown = function(e) {searchy(e)};
+      function searchy(e) 
+      {
+        if (e.which == 13)
+        {
+          var q = document.getElementById("boxu").value;
+          window.open("http://www.ldoceonline.com/dictionary/" + encodeURIComponent(q));
+          window.open("http://en.thefreedictionary.com/" + encodeURIComponent(q));
+          window.open("http://images.google.com/search?q=" + encodeURIComponent(q) + "&tbm=isch&sout=1&safe=off");
+          window.open("http://www.forvo.com/word/" + encodeURIComponent(q) + "/#en");  
+          window.open("http://www.linguee.com/english-portuguese/search?source=english&query=" + encodeURIComponent(q));
+          window.open("http://fraze.it/n_search.jsp?q=" + encodeURIComponent(q) + "&l=0");
+          document.getElementById("boxu").value = "";   
+        }
+      }
+    </script>
+
+  </body>
+</html>
